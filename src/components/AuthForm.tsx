@@ -79,10 +79,8 @@ export default function AuthForm({ onLogin }: AuthFormProps) {
       setAuthError(null);
 
        
-    const redirectUrl =
-      process.env.NODE_ENV === 'production'
-        ? 'https://zen-temp-stacy.netlify.app/'
-        : 'http://localhost:3000'; 
+    const redirectUrl = 'https://zen-temp-stacy.netlify.app/'
+        
 
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
